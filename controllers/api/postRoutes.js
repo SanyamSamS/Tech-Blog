@@ -1,0 +1,63 @@
+const router = require('express').Router();
+const { Post, Comment, User } = require('../../models');
+const withAuth = require('../../utils/auth');
+
+
+// Get all blog posts
+router.get('/', async (req, res) => {
+  try {
+    const postData = await Post.findAll();
+    res.json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+// Get a single blog post by id
+router.get('/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [{ model: Comment, include: [User] }]
+    });
+    res.json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Create a new blog post
+router.post('/', async (req, res) => {
+  try {
+    const newPost = await Post.create(req.body);
+    res.status(200).json(newPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// Update an existing blog post
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedPost = await Post.update(req.body, {
+      where: { id: req.params.id }
+    });
+    res.status(200).json(updatedPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+// Delete a blog post
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedPost = await Post.destroy({
+      where: { id: req.params.id }
+    });
+    res.status(200).json(deletedPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+module.exports = router;
