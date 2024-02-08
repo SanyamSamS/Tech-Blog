@@ -1,24 +1,35 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
-
-.no-button {
-  background: none;
-  border: none;
+/* Global styles */
+body {
+  margin: 0;
   padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+  font-family: Arial, sans-serif;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+/* Header styles */
+.header {
+  background-color: #5D4037; /* Brown background */
+  color: #fff; /* White text */
+  padding: 20px 0;
+  text-align: center;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.navbar {
+  /* Styles for navigation bar */
+}
+
+.blog-title {
+  font-size: 2em;
+}
+
+/* Main content styles */
+.main-content {
+  background-color: #fff; /* White background */
+  padding: 20px;
+}
+
+.posts-container {
+  background-color: #5D4037; /* Brown background */
+  color: #fff; /* White text */
+  padding: 20px;
+  margin-top: 20px;
 }
