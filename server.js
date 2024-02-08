@@ -42,7 +42,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+app.get('/', (req, res) => {  
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn
+  });
+});
+
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Now listening on port ${PORT}!`));
 });
 

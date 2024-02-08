@@ -1,0 +1,13 @@
+<section class="posts">
+    <h2>Latest Posts</h2>
+    {{#each posts}}
+        <article class="post">
+            <h3>{{title}}</h3>
+            <p>{{content}}</p>
+            <p>Posted by {{User.name}} on {{createdAt}}</p>
+            <a href="/post/{{id}}">Read More</a>
+        </article>
+    {{else}}
+        <p>No posts found.</p>
+    {{/each}}
+</section>

@@ -1,0 +1,18 @@
+[
+    {
+      "title": "First Post",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et feugiat leo. Donec ullamcorper, magna ut malesuada vulputate, arcu est porttitor nisl, id eleifend arcu quam at mauris.",
+      "user_id": 1
+    },
+    {
+      "title": "Second Post",
+      "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc nec erat et odio hendrerit tempor.",
+      "user_id": 2
+    },
+    {
+      "title": "Third Post",
+      "content": "Aliquam nec odio non justo volutpat condimentum. Nulla nec est non ante malesuada convallis.",
+      "user_id": 3
+    }
+  ]
+  
