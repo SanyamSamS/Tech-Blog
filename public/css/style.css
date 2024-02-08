@@ -13,8 +13,27 @@ body {
   text-align: center;
 }
 
+/* Navbar styles */
 .navbar {
-  /* Styles for navigation bar */
+  display: flex;
+  justify-content: space-around; /* Distribute navbar items evenly */
+  align-items: center; /* Center items vertically */
+  list-style-type: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.navbar li {
+  display: inline; /* Display list items inline */
+  margin-right: 20px; /* Add some spacing between navbar items */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* White text color */
+}
+
+.navbar a:hover {
+  color: #ccc; /* Light gray color on hover */
 }
 
 .blog-title {
@@ -23,13 +42,18 @@ body {
 
 /* Main content styles */
 .main-content {
-  background-color: #fff; /* White background */
+  background-color: #fff; 
   padding: 20px;
 }
 
 .posts-container {
-  background-color: #5D4037; /* Brown background */
-  color: #fff; /* White text */
+  background-color: gray;
+  color: #fff; 
   padding: 20px;
   margin-top: 20px;
+}
+
+.post {
+  background-color: #5D4037 ;
+  margin-bottom: 20px;
 }

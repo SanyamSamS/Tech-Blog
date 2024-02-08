@@ -1,12 +1,12 @@
-<section class="posts-container">
-    <h2>Latest Posts</h2>
+<section>
+    <h3>Dashboard</h3>
     <container class="post">
     {{#if posts}}
     {{#each posts}}
         <article>
-            <h3>{{title}}</h3>
+            <h3><a href="/edit/{{id}}">{{title}}</a></h3>
             <p>{{content}}</p>
-            <p>Posted by {{user.name}} {{createdAt}} </p>
+            <p>Posted on {{createdAt}} </p>
             <a href="/Post/{{id}}">Read More</a>
         </article>
     {{/each}}
@@ -15,4 +15,3 @@
     {{/if}}
     </container>
 </section>
-
