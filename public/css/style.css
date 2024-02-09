@@ -1,59 +1,158 @@
-/* Global styles */
-body {
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
+}
+
+/* Basic styling */
+body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #816955;
+  color: #333; 
 }
 
-/* Header styles */
-.header {
-  background-color: #5D4037; /* Brown background */
-  color: #fff; /* White text */
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-around; /* Distribute navbar items evenly */
-  align-items: center; /* Center items vertically */
-  list-style-type: none; /* Remove default list styles */
-  padding: 0;
-}
-
-.navbar li {
-  display: inline; /* Display list items inline */
-  margin-right: 20px; /* Add some spacing between navbar items */
-}
-
-.navbar a {
-  text-decoration: none; /* Remove underline from links */
-  color: #fff; /* White text color */
-}
-
-.navbar a:hover {
-  color: #ccc; /* Light gray color on hover */
-}
-
-.blog-title {
-  font-size: 2em;
-}
-
-/* Main content styles */
-.main-content {
-  background-color: #fff; 
+.container {
+  width: 80%;
+  margin: 20px auto 0; /* Add margin to the top */
   padding: 20px;
+  background-color: #ddc0a5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #816955;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container {
+  padding-bottom: 10px;
+  max-width: 60%;
+  max-height: 20vh;
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px 0; /* Add padding to match the navbar */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  margin-top: 10px; /* Add some spacing */
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  background-color: #a1805b;
+  text-decoration: none;
+  padding: 10px 20px; /* Add padding to create button-like appearance */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+  background-color: #5b3d2d; /* Darken the background color on hover */
+}
+
+.main-content {
+  padding: 20px 0;
+  color: #5b3d2d;
 }
 
 .posts-container {
-  background-color: gray;
-  color: #fff; 
   padding: 20px;
+}
+
+article {
+  background-color: #f0dbbb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+article h3 {
+  color: #5b3d2d;
+}
+
+article p {
+  color: #5b3d2d;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #816955;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
+  max-width: 60%;
+  max-height: 20vh;
+}
+
+/* Edit and delete buttons */
+.post-actions {
+  text-align: center;
   margin-top: 20px;
 }
 
-.post {
-  background-color: #5D4037 ;
-  margin-bottom: 20px;
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #a1805b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #816955;
+}
+
+
+.login-container,
+.signup-container {
+    flex: 1; /* Distribute available space evenly */
+    padding: 20px;
+    background-color: #f0dbbb;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Add margin between containers */
+    max-width: 30vw;
+}
+
+.login-container h2,
+.signup-container h2 {
+    text-align: center; /* Center heading text */
+}
+
+/* Flex container for login and signup containers */
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Adjust margin between login and signup containers */
+.login-container {
+    margin-right: 10px;
 }
