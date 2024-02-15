@@ -70,7 +70,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background-color: #5b3d2d; /* Darken the background color on hover */
+  background-color: #5b3d2d; 
 }
 
 .main-content {
@@ -131,7 +131,7 @@ footer {
 }
 
 .btn:hover {
-    background-color: #816955;
+    background-color: #5b3d2d;
 }
 
 
@@ -160,4 +160,32 @@ footer {
 /* Adjust margin between login and signup containers */
 .login-container {
     margin-right: 10px;
+}
+
+
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-section h3 {
+  color: #816955; /* Match the color scheme */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.comments-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comments-section ul li {
+  background-color: #f0dbbb; /* Match the background color */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comments-section ul li:last-child {
+  margin-bottom: 0; /* Remove margin from the last comment */
 }
