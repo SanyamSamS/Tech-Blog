@@ -60,4 +60,18 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Add a comment to a blog post
+router.post('/:id/comment', withAuth, async (req, res) => {
+  try {
+    const newComment = await Comment.create({
+      ...req.body,
+      post_id: req.params.id,
+      user_id: req.session.user_id
+    });
+    res.status(200).json(newComment);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
