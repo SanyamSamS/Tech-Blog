@@ -26,12 +26,17 @@ router.get('/:id', async (req, res) => {
 });
 
 // Create a new blog post
-router.post('/', async (req, res) => {
+router.post('/add', withAuth, async (req, res) => {
   try {
-    const newPost = await Post.create(req.body);
-    res.status(200).json(newPost);
-  } catch (err) {
-    res.status(400).json(err);
+      const newPost = await Post.create({
+          title: req.body.title,
+          content: req.body.content,
+          userId: req.session.user_id 
+      });
+
+      res.status(200).json(newPost);
+  } catch (error) {
+      res.status(500).json({ message: 'Failed to create post' });
   }
 });
 

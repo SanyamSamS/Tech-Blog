@@ -18,5 +18,21 @@
                 <p>No posts found.</p>
             {{/if}}
         </div>
+
+        <section class="new-posts-container">
+            <h3>Create a New Post</h3>
+            <form id="new-post-form">
+                <div class="form-group">
+                    <label for="post-title">Title:</label>
+                    <input type="text" id="post-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-content">Content:</label>
+                    <textarea id="post-content" name="content" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </div>
 </section>
+

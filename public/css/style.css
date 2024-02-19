@@ -98,6 +98,15 @@ article p {
   color: #5b3d2d;
 }
 
+.new-posts-container {
+  background-color: #f0dbbb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
 a {
   text-decoration: none;
 }
