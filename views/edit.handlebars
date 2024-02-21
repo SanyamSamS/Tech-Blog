@@ -6,7 +6,7 @@
             <h3>Edit your post:</h3>
 
             <form class="form new-project-form">
-                <input value="{{id}}" id="post-id" display="hide">
+                <input type="hidden" id="post-id" value="{{post.id}}">
                 <div class="form-group">
                     <label for="project-name">Post title</label>
                     <input class="form-input" type="text" id="project-name" name="project-name" value="{{title}}" />
