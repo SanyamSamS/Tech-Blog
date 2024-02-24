@@ -1,19 +1,23 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../../utils/auth'); // Make sure this path is correct
 
 // POST route to add a new comment
-router.post('/:id/comments', async (req, res) => {
+router.post('/:postId', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
       content: req.body.content,
-      user_id: req.body.userId,
-      post_id: req.params.postId,
+      userId: req.session.user_id, 
+      postId: req.params.postId, 
     });
     res.status(200).json(newComment);
   } catch (err) {
     console.error(err);
-    res.status(500).json(err);
+    res.status(500).json({ message: 'Failed to add comment' });
   }
 });
+
+module.exports = router;
+
 
 module.exports = router;
