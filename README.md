@@ -24,3 +24,13 @@ Tech Blog application for users to share and discuss the latest trends and insig
 
 - Node.js
 - MySQL
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+Sanyam 'Sam' Singh  - sanyam.edu@gmail.com
+
+[Tech Blog Link](https://github.com/your-repo/tech-blog)
