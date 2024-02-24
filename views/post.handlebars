@@ -15,11 +15,17 @@
             <textarea id="comment-content" placeholder="Enter your comment here" required></textarea>
             </div>
             <div class="form-group">
-            <button type="submit" class="btn">Submit</button>
+            {{#if logged_in}}
+                <button type="submit" class="btn">Submit</button>
+                {{else}}
+                <a href="/login" class="btn">Login</a>
+            {{/if}}
+
             </div>
         </form>
         </section>
 
+            
 
         <section class="comments-section">
             <h3>Comments</h3>

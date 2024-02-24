@@ -9,8 +9,8 @@
                             <p>{{content}}</p>
                             <p>Posted on {{formatDate this.createdAt}} </p>
                             <div class="post-actions">
-                                <button class="btn edit-btn">Edit</button>
-                                <button class="btn delete-btn">Delete</button>
+                                <a href="/edit/{{this.id}}" class="btn edit-btn">Edit</a>
+                                <button class="btn delete-btn" value="{{this.id}}">Delete</button>
                             </div>
                         </article>
                 {{/each}}
@@ -37,3 +37,4 @@
 </section>
 
 <script src="/js/dashboard.js"></script>
+<script src="/js/delete.js"></script>

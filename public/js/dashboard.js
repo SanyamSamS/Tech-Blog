@@ -24,5 +24,3 @@ document.getElementById('new-post-form').addEventListener('submit', async (event
   }
 });
 
-  
-  document.querySelector('#post-form').addEventListener('submit', postFormHandler);
