@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
-const withAuth = require('../../utils/auth'); // Make sure this path is correct
+const withAuth = require('../../utils/auth'); 
 
 // POST route to add a new comment
 router.post('/:postId', withAuth, async (req, res) => {
@@ -19,5 +19,3 @@ router.post('/:postId', withAuth, async (req, res) => {
 
 module.exports = router;
 
-
-module.exports = router;
