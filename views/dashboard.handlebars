@@ -2,6 +2,7 @@
     <div class="container">
         <h3>Dashboard</h3>
         <div class="posts-container">
+
             {{#if posts}}
                 {{#each posts}}
                         <article>
@@ -15,24 +16,27 @@
                         </article>
                 {{/each}}
             {{else}}
+            <article>
                 <p>No posts found.</p>
+            </article>
             {{/if}}
-        </div>
 
-        <section class="new-posts-container">
-            <h3>Create a New Post</h3>
-            <form id="new-post-form">
-                <div class="form-group">
-                    <label for="post-title">Title:</label>
-                    <input type="text" id="post-title" name="title" required>
-                </div>
-                <div class="form-group">
-                    <label for="post-content">Content:</label>
-                    <textarea id="post-content" name="content" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+            <section class="new-posts-container">
+                <h3>Create a New Post</h3>
+                <form id="new-post-form">
+                    <div class="form-group">
+                        <label for="post-title">Title:</label>
+                        <input type="text" id="post-title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">Content:</label>
+                        <textarea id="post-content" name="content" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </section>
+
+        </div>
     </div>
 </section>
 

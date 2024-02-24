@@ -13,12 +13,13 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: min(80%, 1200px);
   margin: 20px auto 0; /* Add margin to the top */
   padding: 20px;
   background-color: #ddc0a5;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
 .header {
@@ -26,7 +27,6 @@ body {
   color: #fff;
   border-radius: 10px 10px 0 0;
   text-align: center;
-  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,8 +34,6 @@ body {
 
 header .container {
   padding-bottom: 10px;
-  max-width: 60%;
-  max-height: 20vh;
 }
 
 header h1 {
@@ -52,11 +50,11 @@ header h1 {
 
 header nav ul {
   list-style: none;
-  margin-top: 10px; /* Add some spacing */
+  margin-top: 10px; 
 }
 
 header nav ul li {
-  display: inline;
+  display: inline-grid;
   margin-right: 20px;
 }
 
@@ -95,7 +93,6 @@ article p {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  padding: 20px;
 }
 
 a {
@@ -128,6 +125,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: min(16px, 3vw);
 }
 
 .btn:hover {
@@ -143,7 +141,8 @@ footer {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px; /* Add margin between containers */
-    max-width: 30vw;
+    width: min(300px, 30vw);
+    flex-wrap: wrap;
 }
 
 .login-container h2,
@@ -161,8 +160,6 @@ footer {
 .login-container {
     margin-right: 10px;
 }
-
-
 
 .comments-section {
   margin-top: 20px;
@@ -196,4 +193,24 @@ footer {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+}
+
+header .btn {
+  margin: 2px 50px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #816955;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  border-color: rgb(53, 4, 4); 
+  box-shadow: 0 0 5px 0 rgb(53, 4, 4);
+}
+
+textarea {
+  resize:both;
 }
