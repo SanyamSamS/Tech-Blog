@@ -29,8 +29,11 @@ Tech Blog application for users to share and discuss the latest trends and insig
 
 This project is licensed under the [MIT License](LICENSE).
 
+## Deployed Application
+
+[Tech Blog Link](https://github.com/your-repo/tech-blog)
+
 ## Contact
 
 Sanyam 'Sam' Singh  - sanyam.edu@gmail.com
 
-[Tech Blog Link](https://github.com/your-repo/tech-blog)
