@@ -1,14 +1,6 @@
-// module.exports = {
-//   get_emoji: () => {
-//     const randomNum = Math.random();
-//     let book = "📗";
+const Handlebars = require('handlebars');
 
-//     if (randomNum > 0.7) {
-//       book = "📘";
-//     } else if (randomNum > 0.4) {
-//       book = "📙";
-//     }
-
-//     return `<span for="img" aria-label="book">${book}</span>`;
-//   },
-// };
+// Date formatting
+Handlebars.registerHelper('formatDate', (date) => {
+  return date.toLocaleDateString('en-US', { year: '2-digit', month: 'short', day: 'numeric' });
+});

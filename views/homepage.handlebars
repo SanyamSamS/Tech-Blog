@@ -8,11 +8,7 @@
                         <article>
                             <h3>{{title}}</h3>
                             <p>{{content}}</p>
-                            <p>Posted by {{user.name}} {{createdAt}} </p>
-                            {{!-- <div class="post-actions">
-                                <button class="btn edit-btn">Edit</button>
-                                <button class="btn delete-btn">Delete</button>
-                            </div> --}}
+                            <p>Posted by {{user.name}} {{formatDate this.createdAt}} </p>
                         </article>
                     </a>
                 {{/each}}
