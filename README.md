@@ -31,7 +31,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Deployed Application
 
-[Tech Blog Link](https://github.com/your-repo/tech-blog)
+[Tech Blog Link]([https://github.com/your-repo/tech-blog](https://aqueous-bastion-73706-3db583281a72.herokuapp.com/)https://aqueous-bastion-73706-3db583281a72.herokuapp.com/)
 
 ## Contact
 
